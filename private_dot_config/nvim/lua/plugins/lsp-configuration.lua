@@ -28,6 +28,9 @@ return {
       lspconfig.ruff.setup({
         capabilities = capabilities
       })
+      lspconfig.jedi_language_server.setup({
+        capabilities = capabilities
+      })
       -- enable gopls
       lspconfig.gopls.setup({
         capabilities = capabilities
