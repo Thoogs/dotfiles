@@ -16,3 +16,10 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 -- Setup wrap for long lines
 vim.opt.wrap = true
 vim.opt.breakindent = true
+
+-- Setup Copilot tab completion to shift-tab
+vim.g.copilot_no_tab_map = true
+vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<S-Tab>")', { expr = true, replace_keycodes = false })
+
+-- Setup Copilot-Chat keybinds
+vim.keymap.set('n', '<leader>c', ':CopilotChatToggle<CR>')
